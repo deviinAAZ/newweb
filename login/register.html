@@ -1,341 +1,41 @@
-<!-- register.html — Toko Floral -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<<!DOCTYPE html>
+<html lang="id">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Daftar Akun — Toko Floral</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/ddsmoothmenu.css" type="text/css" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
-<script type="text/javascript">
-  ddsmoothmenu.init({
-    mainmenuid: "templatemo_menu",
-    orientation: 'h',
-    classname: 'ddsmoothmenu',
-    contentsource: "markup"
-  });
-</script>
-
-<style type="text/css">
-/* ── Register page styles ───────────────────────────── */
-#register_wrapper {
-  width: 500px;
-  margin: 30px auto 40px;
-}
-
-#register_wrapper h2 {
-  font-size: 22px;
-  color: #7a3e3e;
-  margin-bottom: 6px;
-  font-family: Georgia, serif;
-}
-
-#register_wrapper p.subtitle {
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 20px;
-}
-
-.reg_form_box {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 28px 32px;
-  border-radius: 4px;
-}
-
-.reg_form_box .form_row {
-  margin-bottom: 16px;
-}
-
-.reg_form_box label {
-  display: block;
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.reg_form_box input[type="text"],
-.reg_form_box input[type="email"],
-.reg_form_box input[type="password"] {
-  width: 100%;
-  padding: 9px 12px;
-  font-size: 13px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background: #fafafa;
-  color: #333;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  transition: border-color 0.2s;
-}
-
-.reg_form_box input[type="text"]:focus,
-.reg_form_box input[type="email"]:focus,
-.reg_form_box input[type="password"]:focus {
-  border-color: #b55c5c;
-  background: #fff;
-  outline: none;
-}
-
-.reg_form_box .match_note {
-  font-size: 11px;
-  color: #c0392b;
-  margin-top: 4px;
-  display: none;
-}
-
-.reg_form_box .btn_register {
-  width: 100%;
-  padding: 11px;
-  font-size: 14px;
-  font-weight: bold;
-  background: #9e3a3a;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  margin-top: 6px;
-  transition: background 0.2s;
-}
-
-.reg_form_box .btn_register:hover {
-  background: #7a2a2a;
-}
-
-.reg_form_box .btn_register:active {
-  background: #5e1e1e;
-}
-
-.reg_alert {
-  padding: 10px 14px;
-  border-radius: 3px;
-  font-size: 13px;
-  margin-bottom: 14px;
-  display: none;
-}
-
-.reg_alert.success {
-  background: #eaf6e4;
-  color: #2e7d32;
-  border: 1px solid #81c784;
-}
-
-.reg_alert.error {
-  background: #fdecea;
-  color: #c62828;
-  border: 1px solid #ef9a9a;
-}
-
-.reg_form_box .login_link {
-  text-align: center;
-  font-size: 12px;
-  color: #888;
-  margin-top: 16px;
-}
-
-.reg_form_box .login_link a {
-  color: #9e3a3a;
-  text-decoration: none;
-}
-
-.reg_form_box .login_link a:hover {
-  text-decoration: underline;
-}
-
-.divider_row {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 18px 0;
-}
-
-/* Nav login button */
-.nav-cta {
-  background: #9e3a3a;
-  color: #fff;
-  border: none;
-  padding: 5px 14px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 12px;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.3px;
-}
-.nav-cta:hover { background: #7a2a2a; }
-</style>
-</head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Akun Baru</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
-<div id="templatemo_wrapper_h">
-
-  <!-- HEADER -->
-  <div id="templatemo_header_wh">
-    <div id="templatemo_header" class="header_home">
-
-      <div id="site_title"><a href="../index.html">Toko Floral</a></div>
-
-      <div id="templatemo_menu" class="ddsmoothmenu">
-        <ul>
-          <li><a href="../index.html">Beranda</a></li>
-          <li><a href="../about.html">Tentang</a></li>
-          <li><a href="../products.html">Produk</a></li>
-          <li><a href="../checkout.html">Checkout</a></li>
-          <li><a href="../contact.html">Kontak</a></li>
-          <p id="userInfo">Belum Login</p>
-          <div id="authArea"><button onclick="goLogin()" class="nav-cta">Login</button></div>
-          <script src="js/welcome.js"></script>
-        </ul>
-        <br style="clear: left" />
-      </div>
-
-    </div>
-  </div>
-  <!-- END HEADER -->
-
-  <!-- MAIN -->
-  <div id="templatemo_main_wrapper">
-    <div id="templatemo_main">
-
-      <div id="register_wrapper">
+    <div class="register-container">
         <h2>Buat Akun Baru</h2>
-        <p class="subtitle">Daftar untuk menikmati kemudahan belanja di Toko Floral.</p>
+        <p>Silakan isi formulir di bawah ini untuk mendaftar.</p>
+        
+        <form action="proses_register.php" method="POST"> <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
 
-        <div class="reg_form_box">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email aktif" required>
+            </div>
 
-          <div id="reg_alert" class="reg_alert"></div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Buat password" required>
+            </div>
 
-          <div class="form_row">
-            <label for="reg_name">Nama Lengkap</label>
-            <input type="text" id="reg_name" placeholder="Contoh: Budi Santoso" />
-          </div>
+            <div class="input-group">
+                <label for="confirm-password">Konfirmasi Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Ulangi password" required>
+            </div>
 
-          <div class="form_row">
-            <label for="reg_email">Alamat Email</label>
-            <input type="email" id="reg_email" placeholder="email@contoh.com" />
-          </div>
+            <button type="submit" class="btn-register">Daftar Sekarang</button>
+        </form>
 
-          <div class="form_row">
-            <label for="reg_phone">No. Telepon <span style="font-weight:normal;color:#aaa">(opsional)</span></label>
-            <input type="text" id="reg_phone" placeholder="08xxxxxxxxxx" />
-          </div>
-
-          <hr class="divider_row" />
-
-          <div class="form_row">
-            <label for="reg_password">Password</label>
-            <input type="password" id="reg_password" placeholder="Minimal 6 karakter" />
-          </div>
-
-          <div class="form_row">
-            <label for="reg_confirm">Konfirmasi Password</label>
-            <input type="password" id="reg_confirm" placeholder="Ulangi password" oninput="checkPasswordMatch()" />
-            <div class="match_note" id="match_note">Password tidak cocok</div>
-          </div>
-
-          <button class="btn_register" onclick="handleRegister()">Daftar Sekarang</button>
-
-          <div class="login_link">
-            Sudah punya akun? <a href="index.html">Masuk di sini</a>
-          </div>
-
+        <div class="login-link">
+            <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
         </div>
-      </div>
-
-      <div class="cleaner"></div>
     </div>
-  </div>
-  <!-- END MAIN -->
-
-  <!-- FOOTER -->
-  <div id="templatemo_footer_wrapper">
-    <div id="templatemo_footer">
-      <div class="footer_left">
-        <a href="#"><img src="../images/1311260370_paypal-straight.png" alt="Paypal" /></a>
-        <a href="#"><img src="../images/1311260374_mastercard-straight.png" alt="Master" /></a>
-        <a href="#"><img src="../images/1311260374_visa-straight.png" alt="Visa" /></a>
-      </div>
-      <div class="footer_right">
-        <p><a href="../index.html">Beranda</a> | <a href="../products.html">Produk</a> | <a href="../about.html">Tentang</a> | <a href="../faqs.html">FAQs</a> | <a href="../checkout.html">Checkout</a> | <a href="../contact.html">Kontak</a></p>
-        <p>Copyright &copy; 2026 <a href="#">Toko Floral</a></p>
-      </div>
-      <div class="cleaner"></div>
-    </div>
-  </div>
-  <!-- END FOOTER -->
-
-</div>
-
-<script type="text/javascript">
-/* ── Helpers ─────────────────────────────────────────── */
-function getUsers() {
-  try { return JSON.parse(localStorage.getItem('floral_users') || '[]'); } catch(e) { return []; }
-}
-function saveUsers(users) {
-  localStorage.setItem('floral_users', JSON.stringify(users));
-}
-
-/* ── Password match check ────────────────────────────── */
-function checkPasswordMatch() {
-  var pw  = document.getElementById('reg_password').value;
-  var cfm = document.getElementById('reg_confirm').value;
-  var note = document.getElementById('match_note');
-  note.style.display = (cfm.length > 0 && pw !== cfm) ? 'block' : 'none';
-}
-
-/* ── Show alert ──────────────────────────────────────── */
-function showAlert(msg, type) {
-  var el = document.getElementById('reg_alert');
-  el.textContent = msg;
-  el.className   = 'reg_alert ' + type;
-  el.style.display = 'block';
-  if (type !== 'success') {
-    setTimeout(function() { el.style.display = 'none'; }, 4000);
-  }
-}
-
-/* ── Register handler ────────────────────────────────── */
-function handleRegister() {
-  var name     = document.getElementById('reg_name').value.trim();
-  var email    = document.getElementById('reg_email').value.trim();
-  var phone    = document.getElementById('reg_phone').value.trim();
-  var password = document.getElementById('reg_password').value;
-  var confirm  = document.getElementById('reg_confirm').value;
-
-  /* Validasi */
-  if (!name || !email || !password || !confirm) {
-    showAlert('Harap isi semua kolom yang wajib diisi.', 'error'); return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    showAlert('Format email tidak valid.', 'error'); return;
-  }
-  if (password.length < 6) {
-    showAlert('Password minimal 6 karakter.', 'error'); return;
-  }
-  if (password !== confirm) {
-    showAlert('Password dan konfirmasi password tidak cocok.', 'error'); return;
-  }
-
-  var users = getUsers();
-  if (users.find(function(u) { return u.email === email; })) {
-    showAlert('Email sudah terdaftar. Silakan login.', 'error'); return;
-  }
-
-  /* Simpan user */
-  users.push({ name: name, email: email, phone: phone, password: password });
-  saveUsers(users);
-
-  showAlert('Akun berhasil dibuat! Mengalihkan ke halaman login...', 'success');
-
-  setTimeout(function() {
-    window.location.href = 'index.html';
-  }, 2000);
-}
-</script>
-
 </body>
 </html>
