@@ -1,41 +1,69 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Akun Baru</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Daftar Akun Baru - NewWeb</title>
+    <!-- 1. MENGKAITKAN KE CSS UTAMA: 
+         Ganti "style.css" di bawah ini dengan nama file CSS yang Anda gunakan di halaman utama/login Anda -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
 <body>
-    <div class="register-container">
-        <h2>Buat Akun Baru</h2>
-        <p>Silakan isi formulir di bawah ini untuk mendaftar.</p>
-        
-        <form action="proses_register.php" method="POST"> <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+
+    <!-- Pembungkus halaman (Suaikan class-nya dengan layout login Anda) -->
+    <div class="login-container"> 
+        <div class="login-box">
+            
+            <div class="header-box">
+                <h2>Mulai Bersama NewWeb</h2>
+                <p>Silakan lengkapi formulir pendaftaran di bawah ini.</p>
             </div>
 
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Masukkan email aktif" required>
+            <!-- Form Registrasi -->
+            <form action="proses_register.php" method="POST">
+                
+                <div class="input-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Buat username baru" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Buat password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="konfirmasi_password">Konfirmasi Password</label>
+                    <input type="password" id="konfirmasi_password" name="konfirmasi_password" placeholder="Ulangi password" required>
+                </div>
+
+                <!-- Tombol Submit (Gunakan class tombol dari CSS utama Anda) -->
+                <button type="submit" class="btn-submit">Daftar Akun</button>
+
+            </form>
+
+            <div class="form-footer">
+                <!-- 2. MENGKAITKAN KE HALAMAN LOGIN: 
+                     Arahkan kembali ke file login Anda (misal: index.html atau login.html) -->
+                <p>Sudah punya akun? <a href="index.html">Login di sini</a></p>
+                
+                <!-- 3. MENGKAITKAN KE HTML UTAMA (LANDING PAGE):
+                     Gunakan "../" untuk keluar dari folder /login ke halaman utama di root -->
+                <p style="margin-top: 10px;"><a href="../index.html">&larr; Kembali ke Beranda Utama</a></p>
             </div>
 
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Buat password" required>
-            </div>
-
-            <div class="input-group">
-                <label for="confirm-password">Konfirmasi Password</label>
-                <input type="password" id="confirm-password" name="confirm_password" placeholder="Ulangi password" required>
-            </div>
-
-            <button type="submit" class="btn-register">Daftar Sekarang</button>
-        </form>
-
-        <div class="login-link">
-            <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
         </div>
     </div>
+
 </body>
 </html>
