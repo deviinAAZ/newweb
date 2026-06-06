@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const userInfo = document.getElementById('userInfo');
     const authArea = document.getElementById('authArea');
 
-    // 3. Cek apakah pengguna sudah login atau belum
-    if (sessionUser) {
-        // Jika sudah login, ubah teks "Belum Login" menjadi "Halo, NamaUser"
-        userInfo.textContent = "Halo, " + sessionUser;
-        
-        // Ubah tombol "Login" menjadi tombol "Logout"
-        authArea.innerHTML = '<button onclick="logoutUser()" style="background: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-top: 5px;">Logout</button>';
-    }
+ if (sessionUser) {
+    // Mengubah teks menjadi Halo, Nama
+    userInfo.textContent = "Halo, " + sessionUser;
+    
+    // TAMBAHKAN BARIS INI UNTUK MENGUBAH WARNA JADI HITAM
+    userInfo.style.color = "#000000"; 
+    userInfo.style.fontWeight = "bold"; // Opsional agar lebih tebal
+    
+    // Mengubah tombol menjadi Logout
+    authArea.innerHTML = '<button onclick="logoutUser()" style="background: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-top: 5px;">Logout</button>';
+}
 });
 
 // 4. Fungsi untuk menghapus sesi login saat tombol Logout diklik
