@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -14,46 +12,77 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.register-container {
+/* Container utama untuk Login & Register agar serasi */
+.login-container, .register-container {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    margin: 20px;
 }
 
-.register-container h2 {
+/* Wrapper box di dalamnya */
+.login-box, .login-wrapper {
+    width: 100%;
+}
+
+/* Logo dan Header */
+.logo {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+.logo i {
+    margin-right: 8px;
+}
+
+h1, h2 {
     margin-bottom: 8px;
     color: #333;
     text-align: center;
+    font-size: 24px;
 }
 
-.register-container p {
+.header-box p, .login-text p {
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.input-group {
+/* Grouping Input */
+.input-group, .input-box {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.input-group label {
+.input-group label, .input-box .label {
     display: block;
     font-size: 14px;
     color: #444;
     margin-bottom: 5px;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
-.input-group input {
+/* Wrapper Input dengan Icon */
+.input-field-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field-wrapper input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 40px 10px 12px; /* Beri ruang di kanan untuk icon */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -61,11 +90,28 @@ body {
     transition: border-color 0.2s;
 }
 
-.input-group input:focus {
+.input-field-wrapper input:focus {
     border-color: #007bff;
 }
 
-.btn-register {
+.input-field-wrapper i {
+    position: absolute;
+    right: 15px;
+    color: #aaa;
+}
+
+/* Checkbox wrapper */
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Tombol Submit */
+.btn-submit, .btn {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
@@ -76,23 +122,40 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s;
+    text-align: center;
 }
 
-.btn-register:hover {
+.btn-submit:hover, .btn:hover {
     background-color: #0056b3;
 }
 
-.login-link {
+/* Footer Form / Link navigasi bawah */
+.form-footer, .extra-line {
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
+    display: block;
+    color: #555;
 }
 
-.login-link a {
+.form-footer a, .extra-line a {
     color: #007bff;
     text-decoration: none;
+    font-weight: 600;
 }
 
-.login-link a:hover {
+.form-footer a:hover, .extra-line a:hover {
     text-decoration: underline;
+}
+
+/* Alert Box */
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
 }
