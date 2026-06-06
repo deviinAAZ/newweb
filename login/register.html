@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun Baru</title>
+    <!-- 1. MENGKAITKAN KE CSS UTAMA: 
+         Ganti "style.css" di bawah ini dengan nama file CSS yang Anda gunakan di halaman utama/login Anda -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
 <div class="register-container"> 
         <div class="login-box">
         
@@ -6,7 +18,7 @@
                 <p>Silakan lengkapi formulir pendaftaran di bawah ini.</p>
             </div>
 
-            <form action="proses_register.php" method="POST">
+            <form id="registerForm">
   
                 <div class="input-group">
                     <label for="nama">Nama Lengkap</label>
@@ -51,6 +63,33 @@
                 <p>Sudah punya akun? <a href="index.html">Login di sini</a></p>
                 <p style="margin-top: 15px;"><a href="../index.html">&larr; Kembali ke Beranda Utama</a></p>
             </div>
-
         </div>
     </div>
+
+</div>
+
+    <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah error 405 di GitHub Pages
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const konfirmasi = document.getElementById('konfirmasi_password').value;
+
+        if (password !== konfirmasi) {
+            alert("Konfirmasi password tidak cocok!");
+            return;
+        }
+
+        // Menyimpan data ke LocalStorage browser
+        const userData = { nama, username, email, password };
+        localStorage.setItem(username, JSON.stringify(userData));
+
+        alert("Pendaftaran berhasil! Silakan login.");
+        window.location.href = "index.html"; // Berpindah ke halaman login
+    });
+    </script>
+</body>
+</html>
