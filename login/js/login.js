@@ -1,36 +1,30 @@
-document.getElementById("loginForm").addEventListener("submit", async function(e) {
+document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
-    });
-
-    const data = await res.json();
-
-    if (data.status === "success") {
-        // simpan username
-            localStorage.setItem("username", data.username);
-            window.location.href = "../index.html";
-         
-    // } else {
-    //     document.getElementById("message").innerText = "Username / Password salah";alert("Login gagal");
-    // }
     
-    } else {
-    const alertBox = document.getElementById("alertBox");
-    alertBox.innerText = "Username atau Password salah, silahkan coba lagi";
-    alertBox.style.display = "block";
+    const usernameInput = document.getElementById('username').value;
+    const passwordInput = document.getElementById('password').value;
+    const alertBox = document.getElementById('alertBox');
 
-    setTimeout(() => {
-        alertBox.style.display = "none";
-    }, 3000);
-} 
-   
+    // Mengambil data user yang tersimpan di LocalStorage berdasarkan username
+    const storedUser = localStorage.getItem(usernameInput);
+
+    if (storedUser) {
+        const userData = JSON.parse(storedUser);
+        
+        // Validasi password
+        if (userData.password === passwordInput) {
+            alert("Login Berhasil!");
+            
+            // Simpan status session login aktif
+            localStorage.setItem('sessionUser', userData.nama);
+            
+            // Pindah ke halaman utama Toko Floral
+            window.location.href = "../index.html"; 
+            return;
+        }
+    }
+
+    // Jika salah, tampilkan kotak alert error
+    alertBox.style.display = "block";
+    alertBox.textContent = "Username atau Password salah!";
 });
