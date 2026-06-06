@@ -28,3 +28,12 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     alertBox.style.display = "block";
     alertBox.textContent = "Username atau Password salah!";
 });
+
+// ... (Bagian koding verifikasi password berhasil) ...
+alert("Login Berhasil!");
+
+// PENTING: Simpan nama lengkap atau username ke LocalStorage sebelum pindah halaman
+localStorage.setItem('sessionUser', userData.nama); 
+
+// Pindah kembali ke halaman utama Toko Floral
+window.location.href = "../index.html";
