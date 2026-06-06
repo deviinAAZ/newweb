@@ -17,48 +17,46 @@
 </head>
 
 <body>
-    <div class=" flex-r container">
-        <div class="flex-r login-wrapper">
+ <div class="login-container">
+        <div class="login-wrapper">
             <div class="login-text">
                 <div class="logo">
                     <span><i class="fab fa-speakap"></i></span>
                     <span>Coders</span>
                 </div>
-                <h1>Sign Up</h1>
-                <p>It's not long before you embark on this journey! </p>
+                <h1>Sign In</h1>
+                <p>It's not long before you embark on this journey!</p>
 
                 <form id="loginForm">
-                <form class="flex-c">
                     <div class="input-box">
-                        <span class="label">username</span>
-                        <div class=" flex-r input">
-                            <input type="text" id="username" placeholder="username">
+                        <span class="label">Username</span>
+                        <div class="input-field-wrapper">
+                            <input type="text" id="username" placeholder="Masukkan username" required>
                             <i class="fas fa-at"></i>
                         </div>
                     </div>
                     
                     <div class="input-box">
                         <span class="label">Password</span>
-                        <div class="flex-r input">
-                            <input type="password" id="password" placeholder="Password">
+                        <div class="input-field-wrapper">
+                            <input type="password" id="password" placeholder="Masukkan password" required>
                             <i class="fas fa-lock"></i>
                         </div>
                     </div>
 
                     <div class="check">
-                        <input type="checkbox" name="" id="">
-                        <span>I've read and agree with T&C</span>
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">I've read and agree with T&C</label>
                     </div>
 
-                    <input class="btn" type="submit" value="Create an Account">
-                    <span class="extra-line">
-                        <span>Already have an account?</span>
-                        <!-- Tambahkan di bagian bawah form login Anda -->
-<p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
-                     
-                    </span>
-                    <div id="alertBox" Class="alert" stlye="dsiplay:none;"></div>
-                </form>
+                    <button class="btn" type="submit">Log In</button>
+                    
+                    <div class="extra-line">
+                        <span>Belum punya akun?</span>
+                        <a href="register.html">Daftar di sini</a>
+                    </div>
+                    
+                    <div id="alertBox" class="alert" style="display:none;"></div>
                 </form>
             </div>
         </div>
